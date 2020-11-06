@@ -10,8 +10,8 @@ describe('no errors for validation for an input that is more than 3 long', () =>
   test('fills out form and submits without error', () => {
     const utils = render(<App />);
     const firstNameInput = screen.getByPlaceholderText('Bill');
-    const lastNameInput = screen.getByPlaceholderText(/Xiong/i);
-    const email = screen.getByPlaceholderText(/xiong.bill@yahoo.com/i);
+    const lastNameInput = screen.getByPlaceholderText('Xiong');
+    const email = screen.getByPlaceholderText('xiong.bill@yahoo.com/i');
     fireEvent.change(firstNameInput, { target: {value: 'Elon Musk'}});
     fireEvent.change(lastNameInput, { target: {value: 'Gates'}});
     fireEvent.change(email, { target: {value: 'Gates'}});
